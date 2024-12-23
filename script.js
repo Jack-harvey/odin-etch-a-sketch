@@ -1,6 +1,7 @@
 const configureButton = document.querySelector("#btnConfigure");
 const sketchPad = document.querySelector("#sketchPad");
 let numberOfDivsOnEachAxis = 16;
+let opacity = 0.1;
 
 function validateUserInput(value) {
   while (isNaN(value)) {
@@ -63,6 +64,10 @@ function removeAllChildNodes(parent) {
 function colorPixel(event) {
   const pixel = event.target;
   pixel.style.background = randomHexColorCode();
+  pixel.style.opacity = opacity;
+  if (opacity <= 1.0) {
+    opacity += 0.1;
+  }
 }
 
 function randomHexColorCode() {
