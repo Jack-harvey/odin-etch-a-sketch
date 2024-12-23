@@ -23,10 +23,11 @@ const configureButton = document.querySelector("#btnConfigure");
 
 configureButton.addEventListener("click", () => {
   numberOfDivsOnEachAxis = getNewUserValue();
+  createNewSketchPad();
 });
 
 const sketchPad = document.querySelector("#sketchPad");
-let numberOfDivsOnEachAxis = 10;
+let numberOfDivsOnEachAxis = 16;
 
 document.addEventListener("DOMContentLoaded", () => {
   createNewSketchPad();
