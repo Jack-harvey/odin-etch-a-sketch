@@ -6,17 +6,23 @@ function validateUserInput(value) {
   while (isNaN(value)) {
     value = Number(
       prompt(
-        "You didn't select a number. Select the number of grids you'd like to display horizontally/vertically"
+        "You didn't select a number. Select the number of grids you'd like to display horizontally/vertically 1-100"
       )
     );
   }
+
+  if (value <= 0 || value >= 101) {
+    alert("You didn't select a number that was between 1 and 100");
+    return 16;
+  }
+
   return value;
 }
 
 function getNewUserValue() {
   let userValue = Number(
     prompt(
-      "Select the number of grids you'd like to display horizontally/vertically"
+      "Select the number of grids you'd like to display horizontally/vertically 1-100"
     )
   );
   userValue = validateUserInput(userValue);
