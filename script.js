@@ -56,13 +56,13 @@ function removeAllChildNodes(parent) {
 
 function colorPixel(event) {
   const pixel = event.target;
-  pixel.style.background = "red";
+  pixel.style.background = randomHexColorCode();
 }
 
-// function randomHexColorCode() {
-//   let n = (Math.random() * 0xfffff * 1000000).toString(16);
-//   return "#" + n.slice(0, 6);
-// }
+function randomHexColorCode() {
+  let n = (Math.random() * 0xfffff * 1000000).toString(16);
+  return "#" + n.slice(0, 6);
+}
 
 document.addEventListener("DOMContentLoaded", () => {
   configureButton.addEventListener("click", () => {
