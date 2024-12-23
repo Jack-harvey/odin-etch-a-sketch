@@ -1,7 +1,3 @@
-function newUserValue(value) {
-  return;
-}
-
 function validateUserInput(value) {
   while (isNaN(value)) {
     value = Number(
@@ -20,6 +16,7 @@ function getNewUserValue() {
     )
   );
   userValue = validateUserInput(userValue);
+  return userValue;
 }
 
 const configureButton = document.querySelector("#btnConfigure");
