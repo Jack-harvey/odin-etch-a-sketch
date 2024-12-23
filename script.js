@@ -26,7 +26,7 @@ configureButton.addEventListener("click", () => {
 });
 
 const sketchPad = document.querySelector("#sketchPad");
-let numberOfDivsOnEachAxis = 16;
+let numberOfDivsOnEachAxis = 10;
 
 document.addEventListener("DOMContentLoaded", () => {
   createNewSketchPad();
