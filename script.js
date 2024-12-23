@@ -1,3 +1,7 @@
+const configureButton = document.querySelector("#btnConfigure");
+const sketchPad = document.querySelector("#sketchPad");
+let numberOfDivsOnEachAxis = 16;
+
 function validateUserInput(value) {
   while (isNaN(value)) {
     value = Number(
@@ -18,20 +22,6 @@ function getNewUserValue() {
   userValue = validateUserInput(userValue);
   return userValue;
 }
-
-const configureButton = document.querySelector("#btnConfigure");
-
-configureButton.addEventListener("click", () => {
-  numberOfDivsOnEachAxis = getNewUserValue();
-  createNewSketchPad();
-});
-
-const sketchPad = document.querySelector("#sketchPad");
-let numberOfDivsOnEachAxis = 16;
-
-document.addEventListener("DOMContentLoaded", () => {
-  createNewSketchPad();
-});
 
 function createNewSketchPad() {
   removeAllChildNodes(sketchPad);
@@ -63,3 +53,12 @@ function removeAllChildNodes(parent) {
     parent.removeChild(parent.firstChild);
   }
 }
+
+document.addEventListener("DOMContentLoaded", () => {
+  configureButton.addEventListener("click", () => {
+    numberOfDivsOnEachAxis = getNewUserValue();
+    createNewSketchPad();
+  });
+
+  createNewSketchPad();
+});
