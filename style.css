@@ -11,23 +11,16 @@ body {
   align-items: center;
 }
 
+button {
+  padding: 5px 13px;
+  border-radius: 8px;
+}
 #sketchPad {
   width: 700px;
   height: 700px;
   display: flex;
   flex-direction: column;
   margin-top: 75px;
-}
-
-.buttons {
-  width: 700px;
-  margin-top: 15px;
-  display: flex;
-}
-
-button {
-  padding: 5px 13px;
-  border-radius: 8px;
 }
 
 #btnConfigure {
@@ -49,4 +42,9 @@ button {
 .pixel-row {
   display: flex;
   flex: auto;
+}
+.buttons {
+  width: 700px;
+  margin-top: 15px;
+  display: flex;
 }
