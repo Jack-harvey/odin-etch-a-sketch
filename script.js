@@ -79,10 +79,12 @@ function randomHexColorCode() {
 document.addEventListener("DOMContentLoaded", () => {
   configureButton.addEventListener("click", () => {
     numberOfDivsOnEachAxis = getNewUserValue();
+    opacity = 0.1;
     createNewSketchPad();
   });
 
   resetButton.addEventListener("click", () => {
+    opacity = 0.1;
     createNewSketchPad();
   });
 
