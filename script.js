@@ -1,4 +1,5 @@
 const configureButton = document.querySelector("#btnConfigure");
+const resetButton = document.querySelector("#btnReset");
 const sketchPad = document.querySelector("#sketchPad");
 let numberOfDivsOnEachAxis = 16;
 let opacity = 0.1;
@@ -78,6 +79,10 @@ function randomHexColorCode() {
 document.addEventListener("DOMContentLoaded", () => {
   configureButton.addEventListener("click", () => {
     numberOfDivsOnEachAxis = getNewUserValue();
+    createNewSketchPad();
+  });
+
+  resetButton.addEventListener("click", () => {
     createNewSketchPad();
   });
 
