@@ -4,17 +4,46 @@
   box-sizing: border-box;
 }
 
-#sketchPad {
-  width: 960px;
-  height: 960px;
-  margin: auto;
+body {
+  background-color: #282a36;
   display: flex;
   flex-direction: column;
+  align-items: center;
+}
+
+#sketchPad {
+  width: 700px;
+  height: 700px;
+  display: flex;
+  flex-direction: column;
+  margin-top: 75px;
+}
+
+.buttons {
+  width: 700px;
+  margin-top: 15px;
+  display: flex;
+}
+
+button {
+  padding: 5px 13px;
+  border-radius: 8px;
+}
+
+#btnConfigure {
+  background-color: #bd93f9;
+  flex: 1;
+  margin-right: 10px;
+}
+
+#btnReset {
+  background-color: #ff5555;
 }
 
 .pixel {
-  border: 1px solid black;
+  border: 1px solid #44475a;
   flex: auto;
+  background-color: #f8f8f2;
 }
 
 .pixel-row {
